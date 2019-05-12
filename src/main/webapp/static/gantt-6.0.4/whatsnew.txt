@@ -1,0 +1,177 @@
+### 6.0.4
+- fix incorrect task position after task vertical dnd in order_branch='marker' mode
+- fix script error after deleting a sub-tree which contains selected task
+- fix script error on Save/Cancel lightbox containing resource filters
+
+### 6.0.2
+- Fix referenceError: getResourceAssignments is not defined when importing Gantt into Vue.js project
+- Fix script error on deleting task after assigning resource to it via resource form
+- Fix JS error in resource diagram after second initialization of Gantt
+- Fix script error on toggle timeline visibility when marker extension is used
+- Fix page freeze on gantt.parse if tasks tree contains cyclic references, script error is thrown instead
+
+### 6.0
+- Advanced resource management
+- New lightbox control for resource management
+- Resource histogram
+- Add ability to group by multiple resources
+- Updated branch ordering
+- Public methods for total slack and free slack
+- Add JSON-REST dataprocessor mode
+- Import from Excel added to online service
+- Auto resize when container size changes
+- Performance update for auto_types
+- Performance update for auto scheduling
+
+### 5.2
+- Inline editing in grid
+- Split task support
+- Updated keyboard navigation
+- Add checkbox and radio controls to the lightbox
+- Add ability to set task types automatically
+- Add ability to use a placeholder row for creating new tasks
+- Auto Scheduling performance improvements
+- New methods and events for Auto scheduling and Undo extension
+- Updated Content Security Policy extension
+- Various bugfixes
+
+### 5.1
+- Resource load diagram
+- RTL mode
+- Horizontal scroll for grid and other layout improvements
+- Destructors for gantt and data processor instances
+- Ability to set min/max widths of grid columns
+- Updated API events for a multiselect extension
+- Ability to drag and drop projects
+- Fixed issues with keyboard navigation in smart rendering mode
+- Many bugfixes
+
+### 5.0
+- Major architecture overhaul
+- Added global layout config
+- Added material skin
+- Various bugfixes
+
+### 4.2
+- Work Time calendars at the task and resource levels
+- WBS code (outline numbers) calculation
+- Autoscroll for drag and drop operations
+- Persian (Farsi) locale 
+- The getter function for key navigation shortcuts 
+- The config for cascade deleting of nested tasks and links
+- The ability to scroll timeline horizontally on Shift+a mouse wheel movement 
+- German and Italian locales are updated
+- GIF images in the Gantt skins are replaced with PNG
+- various fixes
+
+### 4.1
+- Added keyboard navigation
+- Added WAI-ARIA support
+- Added High-contrast themes
+- Updated Auto Scheduling and Critical Path calculations (PRO version)
+- Performance improvements for worktime calculation and timescale rendering
+- Croatian locale added
+- Turkish locale updated
+- Fixed bug redrawing vertical markers using gantt.updateMarker
+- Fixed bug with gantt.showTask error in smart rendering mode
+- Bugfixes for skip_off_time config and multi-tier scales configurations
+- Bugfixes with dataProcessor and REST mode support
+
+### 4.0
+- Added Smart rendering of big data sets feature
+- Added Undo/Redo feature
+- Public API improvements - public helpers for popups, ajax, environment variables
+- Public API cleanup - remove redundant global objects, resolve conflicts with dhtmlxSuite
+- Updated critical path calculation - add support for lag/lead of links
+- Updated Spanish and Chinese locales
+- Minor bugfixes
+
+### 3.3
+- Added dependency Auto Scheduling feature *
+- Added support for Fullscreen mode
+- Added support of unscheduled tasks
+- Added initial support of Content Security Policy
+- Allow specifying per column grid sorting settings
+- Improved branch ordering feature - allow D'n'D between levels
+- Support of REST mode for ajax loading/saving
+- Support of backward planning
+
+* The marked functionality requires Commercial or Enterprise license, and not provided under GPL
+
+### 3.2
+- Added ability to group tasks by custom properties
+- Added multiple selection
+- Added export to iCal and to Excel
+- Added public events for managing tasks reordering in a grid
+- Added ability to specify time range in year selector
+- Major performance improvement of worktime and critical path calculations
+- New samples and API events
+
+### 3.1
+- Added ability to drag tasks on touch devices
+- Incorrect tooltip behavior on expand/collapse task tree fixed
+- Order of API events during gantt initialization fixed
+- Issues with markers and multiple initialization of the gantt fixed
+- Issues with markers and gantt.clearAll fixed
+- Issues with gantt.serialize method and nested projects of gantt tree fixed
+- Fixes in French locale
+- Improvements in time range calculation
+
+### 3.0
+- Support of Baselines, Deadlines and other custom elements of the timeline *
+- Critical path support *
+
+- Ability to display vertical lines in a timeline area (Today line, Status line, etc.)
+
+- Ability to resize Grid by D'n'D, ability to hide/show columns dynamically *
+- Simplified API for coloring tasks and links *
+- New performance-related options - dynamic loading and simple background rendering *
+
+- Extended configuration for managing 'readonly' state of the tasks
+- Extended set of methods for managing task tree hierarchy
+
+- Support of task types and ability to skip time from the scale was removed from a Free version of the component
+
+* The marked functionality requires Commercial or Enterprise license, and not provided under GPL
+
+
+### 2.1
+- Milestone and Projects support
+- Custom configuration of the lightbox for different task types
+- Non-linear scales, ability to skip time from the scale
+
+- Ability to calculate duration in work days/hours instead of calendar time
+
+- Support of multiple gantts on the page (requires PRO version)
+
+- Updated some localisations
+- Added more configurations and API methods events
+- Various bugfixes
+
+### 2.0
+
+- jQuery integration
+- Major performance improvements
+- Ready-to-use PHP integration
+
+- Configurable multi-line scales
+- Configurable multi-column grid with optional sorting and Drag-n-Drop
+- Configurable popup form for editing tasks
+- All text elements can be defined through templates
+- All date strings can be configured
+- All text labels can be localized
+
+- Default skin changed to "terrace"
+- 3 new skins
+- Bars can have an optional inner resizer
+- Optional UI for task creation
+- Vertical and horizontal lines can be colored based on custom rules
+
+- Loading and serialization from JSON
+- Loading and serialization with the simplified XML format
+- 3 types of task linking
+- Gantt charts work on touch devices
+
+- A LOT of events added
+- Templates and configuration options added
+- API simplified, it uses a single gantt object instead of a bunch of different objects
