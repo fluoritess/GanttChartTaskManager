@@ -52,13 +52,13 @@
     //gantt.parse(tasks);
     gantt.load("../getData");
 
-/*    // 添加进 任务项目 mysql
+    // 添加进 任务项目 mysql
     gantt.attachEvent("onAfterTaskAdd",function(id,item){
         var formatFunc = gantt.date.date_to_str("%d-%m-%Y");
         var start_date = formatFunc(item.start_date);
         var end_date = formatFunc(item.end_date);
-       /!* item.start_date=start_date;
-        item.end_date=end_date;*!/
+       /* item.start_date=start_date;
+        item.end_date=end_date;*/
          $.ajax({
            type:"post",
            url:"../doAdd?start_date="+start_date+"&end_date="+end_date,
@@ -81,8 +81,8 @@
         var formatFunc = gantt.date.date_to_str("%d-%m-%Y");
         var start_date = formatFunc(item.start_date);
         var end_date = formatFunc(item.end_date);
-        /!* item.start_date=start_date;
-         item.end_date=end_date;*!/
+        /* item.start_date=start_date;
+         item.end_date=end_date;*/
         $.ajax({
             type:"post",
             url:"../doUpdate?start_date="+start_date+"&end_date="+end_date,
@@ -181,6 +181,6 @@
             }
 
         })
-    });*/
+    });
 </script>
 </html>

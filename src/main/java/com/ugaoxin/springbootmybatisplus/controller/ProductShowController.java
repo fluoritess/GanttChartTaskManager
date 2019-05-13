@@ -69,6 +69,9 @@ public class ProductShowController {
         int i=0;
         productData.setStartDate(start_date.split(",")[0]);
         productData.setEndDate(end_date.split(",")[0]);
+        Long id=productData.getId();
+        System.out.print(id);
+        productData.setId(id);
         boolean b = productDataService.saveOrUpdate(productData);
 
         if(b){

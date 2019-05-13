@@ -103,6 +103,10 @@
                   alert("密码或账号错误")
                   window.location.href="http://localhost:8080/static/Login.html"
               }
+              else if(name=='admin'){
+                  alert("管理员"+name+"登录成功")
+                  window.location.href="http://localhost:8080/views/adminshow.jsp"
+              }
               else {
                   alert("用户"+name+"登录成功")
                   window.location.href="http://localhost:8080/views/show.jsp"
