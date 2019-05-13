@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <title>登录注册</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-treeview.css">
+    <style type="text/css">
+      .form_1{
+          position: relative;
+          top:200px;
+          left: 600px;
+          width: 400px;    
+      }
+     html.body{
+       width: 100%;
+       height: 100%;
+     }
+     body{
+       background: url("bg1.jpg") no-repeat;
+       background-size: 100%;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="form_1">
+    <form class="form-horizontal" id="myform_1" action="#">
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">User</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" placeholder="UserName" id="name_1" style="width:200px;">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" placeholder="Password" id="name_2" style="width:200px;">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Remember me
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" class="btn btn-default" id="button">Sign in</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  </body>
+<script type="text/javascript">
+
+    // $("#button").click(function () {
+    //   $.ajax({
+    //           type: "POST",   //提交的方法
+    //           url:"http://localhost:8080/Login", //提交的地址
+    //           dataType: "json",
+    //           data:$('#myform_1').serialize(),// 序列化表单值
+    //           async: false,
+    //           error: function(request) {  //失败的话
+    //                alert("Connection error");
+    //           },
+    //           success: function(data) {  //成功
+    //                alert(data);  //就将返回的数据显示出来
+    //                window.location.href="http://localhost:8080/Login"
+    //           }
+    //        });
+    //      });
+    $("#button").click(function() {
+      var json = {
+        name: $("#name_1").val(),
+        password:$("#name_2").val()
+      };
+    /*  alert(JSON.stringify(json));*/
+      json = JSON.stringify(json);
+    // window.onload=function(){
+    //   document.getElementById("button").onclick = function(){
+    //       alert(document.getElementById("name").value);
+    //   }
+    // }
+      $.ajax({
+          type: "POST",
+          url: "/Login",
+          contentType: "application/json; charset=utf-8",
+          data: json,
+          async: false,
+          dataType: "json",
+          success: function (msg) {
+              var name=msg.name
+              if(name == '' || name == null || name == undefined){
+                  alert("密码或账号错误")
+                  window.location.href="http://localhost:8080/static/Login.html"
+              }
+              else {
+                  alert("用户"+name+"登录成功")
+                  window.location.href="http://localhost:8080/views/show.jsp"
+              }
+             /* if (message > 0) {
+                  alert("请求已提交！我们会尽快与您取得联系");
+              }*/
+          },
+          error: function (message) {
+              $("#request-process-patent").html("提交数据失败！");
+          }
+      });
+  });
+  </script>
+  </html>

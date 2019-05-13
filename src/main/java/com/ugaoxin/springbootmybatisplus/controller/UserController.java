@@ -53,7 +53,10 @@ public class UserController {
         user user=new user(name,password,1);
         Boolean b=loginService.Login(user);
         Map map=new HashMap();
-        map.put("data",b);
+        if(b){
+            map.put("name",name);
+            System.out.print(name);
+        }
         return map;
     }
 }
