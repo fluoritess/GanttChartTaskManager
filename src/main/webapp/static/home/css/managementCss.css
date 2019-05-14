@@ -1,0 +1,86 @@
+body{
+    margin: 0px;
+    padding: 0px;
+
+}
+.top{
+    width: 100%;
+    height:60px;
+    background-color: blueviolet;
+}
+.top a{
+	color: #fff !important;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft Yahei','Hiragino Sans GB','Heiti SC','WenQuanYi Micro Hei',sans-serif;
+    display: block;
+    padding: 10px;
+}
+.top_a{
+    position: relative;
+    bottom: 60px;
+    left: 200px;
+}
+
+.bottom_left{
+    width:20%;
+    height: 850px;
+    float: left;
+    background-color:slategray; 
+}
+.bottom_right{
+    width: 80%;
+    height:850px;
+    float: right;
+    background-color:white;
+}
+#ul_1>li{
+  
+    list-style: none;
+}
+#ul_1>li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft Yahei','Hiragino Sans GB','Heiti SC','WenQuanYi Micro Hei',sans-serif;
+    display: block;
+    padding: 10px;
+      color: #fff !important;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft Yahei','Hiragino Sans GB','Heiti SC','WenQuanYi Micro Hei',sans-serif;
+    display: block;
+    padding: 10px;
+}
+li:hover{
+    background-color: #00DDDD;
+}
+/* Border styles */
+#table-4 thead, #table-4 tr {
+border-top-width: 1px;
+border-top-style: solid;
+border-top-color: rgb(211, 202, 221);
+}
+#table-4 {
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: rgb(211, 202, 221);
+}
+
+/* Padding and font style */
+#table-4 td, #table-4 th {
+padding: 5px 10px;
+font-size: 12px;
+font-family: Verdana;
+color: rgb(95, 74, 121);
+}
+
+/* Alternating background colors */
+#table-4 tr:nth-child(even) {
+background: rgb(223, 216, 232)
+}
+#table-4 tr:nth-child(odd) {
+background: #FFF
+}
+a{
+	text-decoration: none;
+}

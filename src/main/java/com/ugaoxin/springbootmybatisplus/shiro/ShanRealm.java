@@ -20,11 +20,14 @@ import java.util.Set;
 import static org.apache.tomcat.util.codec.binary.Base64.encodeBase64String;
 
 public class ShanRealm extends AuthorizingRealm {
-    String salt=getSalt();
+    String salt="wsw";
     Map<String,String> usermap=new HashMap<>();
     {
-        Md5Hash md5Hash=new Md5Hash("123456",salt);
+        Md5Hash md5Hash=new Md5Hash("123",salt);
+        usermap.put("wen",md5Hash.toString());
+        usermap.put("admin",md5Hash.toString());
         usermap.put("shan",md5Hash.toString());
+        usermap.put("wang",md5Hash.toString());
     }
     //授权
     @Override

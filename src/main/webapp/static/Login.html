@@ -55,6 +55,7 @@
         <div class="col-sm-offset-2 col-sm-10">
           <button type="button" class="btn btn-default" id="button">Sign in</button>
             <button type="button" class="btn btn-default" ><a href="register.html">register</a></button>
+            <button type="button" class="btn btn-default" ><a href="home/index.jsp">home</a></button>
         </div>
       </div>
     </form>
@@ -92,7 +93,7 @@
     // }
       $.ajax({
           type: "POST",
-          url: "/Login",
+          url: "/ShiroLogin",
           contentType: "application/json; charset=utf-8",
           data: json,
           async: false,

@@ -38,4 +38,11 @@ public class LoginServiceImpl implements LoginService {
         }
         return false;
     }
+
+    @Override
+    public String getSalt() {
+        List<system> lists=systemService.list();
+        String salt=lists.get(0).getSalt();
+        return salt;
+    }
 }

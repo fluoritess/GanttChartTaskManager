@@ -9,4 +9,5 @@ import com.ugaoxin.springbootmybatisplus.pojo.user;
  */
 public interface LoginService {
     Boolean Login(user user);
+    String getSalt();
 }

@@ -6,6 +6,7 @@ import com.ugaoxin.springbootmybatisplus.pojo.user;
 import com.ugaoxin.springbootmybatisplus.service.LoginService;
 import com.ugaoxin.springbootmybatisplus.service.UserRegister;
 import com.ugaoxin.springbootmybatisplus.service.UserService;
+import com.ugaoxin.springbootmybatisplus.shiro.UserLoginUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -55,6 +56,24 @@ public class UserController {
        /* int permission=(int)reMap.get("permission");*/
         user user=new user(name,password,1);
         Boolean b=loginService.Login(user);
+        Map map=new HashMap();
+        if(b){
+            map.put("name",name);
+            System.out.print(name);
+        }
+        return map;
+    }
+    /**
+     * 用户登录(Shiro测试)
+     */
+    @RequestMapping("ShiroLogin")
+    public Map<String,Object> ShiroLogin(@RequestBody Map<String,Object> reMap){
+        String salt=loginService.getSalt();
+        String name=(String)reMap.get("name");
+        String password=(String)reMap.get("password");
+        /* int permission=(int)reMap.get("permission");*/
+        UserLoginUtil userLoginUtil=new UserLoginUtil();
+        Boolean b=userLoginUtil.LoginUtil(name,password);
         Map map=new HashMap();
         if(b){
             map.put("name",name);
