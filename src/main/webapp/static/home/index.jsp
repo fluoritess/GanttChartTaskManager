@@ -23,9 +23,9 @@
 			 <div class="top-menu">
 				<span class="menu"> </span>
 				<ul>
-					 <li class="active"><span class="pic1"></span><a href="index.html">主页</a></li>
+					 <li class="active"><span class="pic1"></span><a href="index.jsp">主页</a></li>
 					 <li><span class="pic2"></span><a href="http://localhost:8080/static/Login.html">注册/登录</a></li>
-					 <li><span class="pic3"></span><a href="#">使用说明</a></li>
+					 <li><span class="pic3"></span><a href="http://localhost:8080/static/404/error.html">使用说明</a></li>
 					 <li><span class="pic4"></span><a href="http://localhost:8080/static/404/error.html">关于我们</a></li>
 						<div class="clearfix"></div>
 				 </ul>

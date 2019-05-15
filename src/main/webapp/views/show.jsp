@@ -35,6 +35,7 @@
          <input value="导出PDF" type="button" class="btn btn-warning" onclick="gantt.exportToPDF()">
          <input  value="导出图片" type="button" class="btn btn-success" onclick="gantt.exportToPNG()">
          <input value="导出Excel" type="button" class="btn btn-danger" onclick="gantt.exportToExcel()">
+         <input value="登出" type="button" class="btn btn-danger"  id="button_2">
      </div>
      <div class="panel panel-default">
          <div class="panel-heading">
@@ -182,5 +183,8 @@
 
         })
     });*/
+    $("#button_2").click(function() {
+        window.location.href="../static/home/index.jsp"
+    });
 </script>
 </html>

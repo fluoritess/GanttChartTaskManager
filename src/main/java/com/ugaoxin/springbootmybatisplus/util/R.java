@@ -3,7 +3,12 @@ package com.ugaoxin.springbootmybatisplus.util;
 
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * @author wsw
+ * @Package com.ugoxin.springbootmybatisplus.util
+ * @Description:json封装工具类
+ * @date 2019年5月15日 21:17:11
+ */
 public class R extends HashMap<String, Object> {
     private static final long serialVersionUID = 1L;
 
