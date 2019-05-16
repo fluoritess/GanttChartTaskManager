@@ -22,10 +22,6 @@
     .right-container::after{
         clear: both;
     }
-    td
-{
-    text-align:center;
-}
     </style>
 </head>
 <body>
@@ -72,38 +68,42 @@
         </div>
     </div>
   <div class="right-container" >
-    <div class ="tableContainer">
-    <input id ="currentPage" type ="hidden" value =" @ViewData[ "currentPage"] "/>
-    <input id ="totalPages" type ="hidden" value =" @ViewData["totalPages" ] " />
-    <table class ="table table-hover table-striped">
-             <thead>
-                 <tr>
-                     <th class ="col-md-4 text-center"> 用户名 </th >
-                     <th class ="col-md-4 text-center"> 邮箱 </th >
-                     <th class ="col-md-4 text-center"> 权限 </th >
-                </tr>
-            </thead>
-            <tbody>
-                    <tr>
-                        <td>das </td>
-                        <td> @item.OrderId </td>
-                        <td> @item.OrderDate </td>
-                    </tr>             
-            </tbody>
-        </table>
-        <ul class="pagination" id="example">
-            <li><a href="#">&laquo;</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">&raquo;</a></li>
-        </ul>
-        </div>
+        <form class="form-horizontal">
+                <div class="container">
+                    <div class="row" style="padding: 20px 0">
+                        <h3>系统参数修改</h3>
+                    </div>
+                    <div class="row form-group">
+                        <label class="control-label col-lg-1" for="name">盐值</label>
+                        <div class="col-lg-5 col-md-6">
+                            <input class="form-control" name="name" id="name" type="text">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                            <label class="control-label col-lg-1" for="name">系统密码</label>
+                            <div class="col-lg-5 col-md-6">
+                                <input class="form-control" name="name" id="name" type="text">
+                            </div>
+                        </div>
+                    <div class="row form-group">
+                        <label class="control-label col-lg-1">修改说明</label>
+                        <div class="col-lg-5 col-md-6">
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary">提交</button>
+                    <button type="button" class="btn btn-primary" id="button_1">返回</button>
+                </div>
+             
+            </form>
+  
   </div>
 </body>
 <script type="text/javascript">
-    
+
+    $("#button_1").click(function() {
+        window.location.href="http://localhost:8080/static/houtai.html"
+    });
+
 </script>
 </html>
