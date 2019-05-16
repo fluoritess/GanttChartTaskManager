@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/metisMenu/3.0.4/metisMenu.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/startbootstrap-sb-admin-2/3.3.7+1/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+    .left-nav{
+        float: left;
+    }
+    .right-container{
+        float: left;
+        height: 200px;
+        width:calc(100vw - 250px);
+        margin-left:250px;
+    }
+    .right-container::after{
+        clear: both;
+    }
+    td
+{
+    text-align:center;
+}
+    </style>
+</head>
+<body>
+    <script src="jquery/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/metisMenu/3.0.4/metisMenu.min.js"></script> 
+    <script src="https://cdn.bootcss.com/startbootstrap-sb-admin-2/3.3.7+1/js/sb-admin-2.min.js"></script>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/pages/back/index.jsp"><i class="fa fa-graduation-cap fa-fw" aria-hidden="true" ></i>任务管理系统</a>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i
+                    class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i> </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i> 用户信息</a></li>
+                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> 设置中心</a></li>
+                    <li class="divider"></li>
+                    <li><a href="login.jsp"><i class="fa fa-sign-out fa-fw"></i> 登出系统</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="navbar-default sidebar left-nav" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <li><a href="/pages/back/index.jsp"><i class="fa fa-dashboard fa-fw"></i>系统首页</a></li>
+                <li><a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> 用户管理<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="houtai_user" id="href_1">用户列表</a></li>
+                        <li><a href="/pages/back/classes/classes_list.action">增加用户</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-edit fa-fw"></i> 任务管理<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="panels-wells.html">任务列表</a></li>
+                        <li><a href="buttons.html">发布任务</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-question-circle-o fa-fw" aria-hidden="true"></i>系统参数</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  <div class="right-container" >
+    <table class ="table table-hover table-striped">
+             <thead>
+                 <tr>
+                     <th class ="col-md-4 text-center"> 用户名 </th >
+                     <th class ="col-md-4 text-center"> 邮箱 </th >
+                     <th class ="col-md-4 text-center"> 权限 </th >
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>das </td>
+                        <td> @item.OrderId </td>
+                        <td> @item.OrderDate </td>
+                    </tr>             
+            </tbody>
+        </table>
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+  </div>
+</body>
+<script type="text/javascript">
+    
+</script>
+</html>

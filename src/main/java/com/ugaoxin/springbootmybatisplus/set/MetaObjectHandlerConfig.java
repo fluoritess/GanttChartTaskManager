@@ -7,7 +7,10 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 
- 
+/**
+ * 配置公共字段自动填充功能
+ */
+
 @Component
 public class MetaObjectHandlerConfig implements MetaObjectHandler {
 

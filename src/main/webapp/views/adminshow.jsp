@@ -186,7 +186,7 @@
     });
 
     $("#button_1").click(function() {
-        window.location.href="http://localhost:8080/static/Login.html"
+        window.location.href="http://localhost:8080/static/houtai.html"
     });
     $("#button_2").click(function() {
         window.location.href="../static/home/index.jsp"
